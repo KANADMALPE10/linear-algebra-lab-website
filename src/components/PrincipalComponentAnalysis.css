@@ -1,0 +1,1202 @@
+.pca-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #050506;
+  color: white;
+}
+
+.pca-background-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(82, 39, 255, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 35%,
+      rgba(255, 43, 214, 0.13),
+      transparent 32%
+    );
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.pca-header {
+  height: 76px;
+  padding: 0 5vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  position: relative;
+  z-index: 2;
+
+  backdrop-filter: blur(18px);
+}
+
+.pca-back-button {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: rgba(255, 255, 255, 0.7);
+
+  padding: 10px 15px;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  font-size: 12px;
+
+  transition: 180ms ease;
+}
+
+.pca-back-button:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: white;
+}
+
+.pca-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  font-size: 14px;
+}
+
+.pca-brand span {
+  width: 32px;
+  height: 32px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 9px;
+}
+
+.pca-experiment-number {
+  font-size: 10px;
+
+  letter-spacing: 0.18em;
+
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.pca-content {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1150px;
+
+  margin: auto;
+
+  padding: 100px 28px 140px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.pca-hero {
+  max-width: 900px;
+
+  margin: 0 auto 90px;
+
+  text-align: center;
+}
+
+.pca-label,
+.pca-section-label,
+.pca-card-label {
+  font-size: 10px;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  text-align: center;
+}
+
+.pca-hero h1 {
+  margin: 25px auto;
+
+  font-size: clamp(58px, 8.5vw, 115px);
+
+  line-height: 0.88;
+
+  letter-spacing: -0.07em;
+
+  font-weight: 500;
+
+  text-align: center;
+}
+
+.pca-hero h1 span {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.pca-hero p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 17px;
+
+  line-height: 1.75;
+
+  text-align: center;
+}
+
+/* =========================
+   AIM / OBJECTIVE
+========================= */
+
+.pca-info-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+
+  margin-bottom: 120px;
+}
+
+.pca-info-card {
+  padding: 30px;
+
+  min-height: 150px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  text-align: center;
+}
+
+.pca-info-card h2 {
+  margin: 25px auto 0;
+
+  font-size: 27px;
+
+  font-weight: 400;
+
+  text-align: center;
+}
+
+.pca-info-card p {
+  max-width: 500px;
+
+  margin: 25px auto 0;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.pca-section {
+  margin-bottom: 120px;
+
+  text-align: center;
+}
+
+/* =========================
+   THEORY
+========================= */
+
+.pca-theory {
+  text-align: center;
+}
+
+.pca-theory-content {
+  max-width: 760px;
+
+  margin: 30px auto 0;
+
+  text-align: center;
+}
+
+.pca-theory-content h2 {
+  font-size: clamp(35px, 5vw, 58px);
+
+  font-weight: 400;
+
+  letter-spacing: -0.05em;
+
+  line-height: 1;
+
+  margin: 0 auto 30px;
+
+  text-align: center;
+}
+
+.pca-theory-content p {
+  max-width: 720px;
+
+  margin: 18px auto;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  text-align: center;
+}
+
+/* =========================
+   INTERACTIVE HEADING
+========================= */
+
+.pca-interactive-heading {
+  margin: 25px auto 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 18px;
+
+  text-align: center;
+}
+
+.pca-interactive-heading h2 {
+  font-size: clamp(35px, 5vw, 58px);
+
+  font-weight: 400;
+
+  letter-spacing: -0.05em;
+
+  margin: 0 auto 18px;
+
+  text-align: center;
+}
+
+.pca-interactive-heading p {
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  text-align: center;
+}
+
+.pca-stage-status {
+  padding: 10px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 999px;
+
+  font-size: 9px;
+
+  letter-spacing: 0.16em;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================
+   PCA LAB
+========================= */
+
+.pca-lab {
+  margin-top: 35px;
+
+  display: grid;
+
+  grid-template-columns: 1.5fr 0.7fr;
+
+  gap: 15px;
+
+  text-align: center;
+}
+
+.pca-visual-container,
+.pca-stage-controls {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.pca-visual-container {
+  padding: 20px;
+}
+
+/* =========================
+   VISUALIZATION
+========================= */
+
+.pca-visual {
+  height: 480px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(82, 39, 255, 0.12),
+      transparent 55%
+    ),
+    #09090c;
+}
+
+.axis {
+  position: absolute;
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.axis-x {
+  left: 8%;
+  right: 6%;
+  bottom: 15%;
+
+  height: 1px;
+}
+
+.axis-y {
+  top: 8%;
+  bottom: 15%;
+  left: 8%;
+
+  width: 1px;
+}
+
+.axis-label {
+  position: absolute;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 10px;
+
+  letter-spacing: 0.12em;
+}
+
+.axis-label-x {
+  right: 7%;
+  bottom: 10%;
+}
+
+.axis-label-y {
+  left: 3%;
+  top: 7%;
+
+  writing-mode: vertical-rl;
+}
+
+.data-point {
+  width: 9px;
+  height: 9px;
+
+  position: absolute;
+
+  transform: translate(-50%, 50%);
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 18px rgba(255, 255, 255, 0.4);
+
+  transition:
+    left 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    bottom 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.principal-axis {
+  position: absolute;
+
+  width: 75%;
+
+  height: 1px;
+
+  left: 12%;
+
+  bottom: 51%;
+
+  transform: rotate(-28deg);
+
+  transform-origin: center;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 43, 214, 0.85),
+    rgba(82, 39, 255, 0.85),
+    transparent
+  );
+
+  transition:
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.principal-axis span {
+  position: absolute;
+
+  right: 8px;
+
+  top: -24px;
+
+  font-size: 9px;
+
+  letter-spacing: 0.12em;
+
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================
+   STAGE STATES
+========================= */
+
+.pca-centered .data-point {
+  filter: blur(0.2px);
+}
+
+.pca-covariance .principal-axis {
+  transform: rotate(-28deg) scaleX(0.85);
+}
+
+.pca-components .principal-axis {
+  transform: rotate(-28deg) scaleX(1.05);
+}
+
+.pca-projection .data-point {
+  transform: translate(-50%, 50%) scale(0.8);
+}
+
+.pca-reconstruction .data-point {
+  transform: translate(-50%, 50%) scale(1.05);
+}
+
+/* =========================
+   PROJECTION LINES
+========================= */
+
+.projection-line {
+  position: absolute;
+
+  width: 1px;
+
+  height: 65px;
+
+  background: rgba(255, 43, 214, 0.25);
+
+  transform-origin: bottom;
+
+  transform: rotate(62deg);
+
+  pointer-events: none;
+}
+
+/* =========================
+   COVARIANCE
+========================= */
+
+.covariance-box,
+.component-badge,
+.reconstruction-badge {
+  position: absolute;
+
+  top: 30px;
+  right: 30px;
+
+  padding: 14px 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 12px;
+
+  background: rgba(5, 5, 6, 0.65);
+
+  backdrop-filter: blur(10px);
+
+  text-align: center;
+}
+
+.covariance-box {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 9px;
+
+  letter-spacing: 0.12em;
+}
+
+.covariance-box strong {
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  letter-spacing: 0;
+}
+
+.component-badge,
+.reconstruction-badge {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 10px;
+
+  letter-spacing: 0.12em;
+}
+
+/* =========================
+   VISUAL CAPTION
+========================= */
+
+.pca-visual-caption {
+  margin-top: 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 0 5px;
+
+  text-align: center;
+}
+
+.pca-visual-caption strong {
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+.pca-visual-caption span {
+  max-width: 650px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+/* =========================
+   STAGE CONTROLS
+========================= */
+
+.pca-stage-controls {
+  padding: 12px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.pca-stage-controls button {
+  border: 0;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  padding: 14px;
+
+  border-radius: 11px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  transition: 180ms ease;
+}
+
+.pca-stage-controls button > span {
+  font-size: 9px;
+
+  opacity: 0.35;
+}
+
+.pca-stage-controls button div {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 5px;
+
+  text-align: center;
+}
+
+.pca-stage-controls button strong {
+  font-size: 12px;
+
+  font-weight: 400;
+
+  text-align: center;
+}
+
+.pca-stage-controls button small {
+  max-width: 220px;
+
+  font-size: 10px;
+
+  line-height: 1.45;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  text-align: center;
+}
+
+.pca-stage-controls button:hover {
+  background: rgba(255, 255, 255, 0.05);
+
+  color: white;
+}
+
+.pca-stage-controls button.active {
+  background: rgba(255, 255, 255, 0.09);
+
+  color: white;
+}
+
+.pca-stage-controls button.active small {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* =========================
+   OBJECTIVES
+========================= */
+
+.pca-objectives {
+  max-width: 850px;
+
+  margin: 30px auto 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  text-align: center;
+}
+
+.pca-objective {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 30px 20px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  text-align: center;
+}
+
+.pca-objective > span {
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 10px;
+}
+
+.pca-objective > div {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+.pca-objective h3 {
+  margin: 0 0 8px;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  text-align: center;
+}
+
+.pca-objective p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+/* =========================
+   CODE
+========================= */
+
+.pca-code-section {
+  margin-bottom: 120px;
+
+  text-align: center;
+}
+
+.pca-code-header {
+  margin: 25px auto 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 20px;
+
+  text-align: center;
+}
+
+.pca-code-header h2 {
+  font-size: clamp(35px, 5vw, 58px);
+
+  font-weight: 400;
+
+  letter-spacing: -0.05em;
+
+  margin: 0 0 20px;
+
+  text-align: center;
+}
+
+.pca-code-header p {
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  text-align: center;
+}
+
+.pca-code-language {
+  font-size: 10px;
+
+  letter-spacing: 0.15em;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.pca-code-section pre {
+  margin: 30px auto 0;
+
+  max-width: 1000px;
+
+  text-align: left;
+
+  padding: 28px;
+
+  overflow-x: auto;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+.pca-code-section code {
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+}
+
+/* =========================
+   IMAGE APPLICATION
+========================= */
+
+.pca-image-section {
+  text-align: center;
+}
+
+.pca-image-content {
+  max-width: 900px;
+
+  margin: 30px auto 0;
+
+  text-align: center;
+}
+
+.pca-image-content h2 {
+  font-size: clamp(35px, 5vw, 58px);
+
+  font-weight: 400;
+
+  letter-spacing: -0.05em;
+
+  margin: 0 auto 25px;
+
+  text-align: center;
+}
+
+.pca-image-content > p {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  line-height: 1.8;
+
+  font-size: 14px;
+
+  text-align: center;
+}
+
+.pca-image-content code {
+  color: rgba(255, 255, 255, 0.65);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+}
+
+.pca-image-flow {
+  margin-top: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+}
+
+.pca-image-card {
+  width: 210px;
+
+  padding: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  text-align: center;
+}
+
+.pca-image-card > span {
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-size: 8px;
+
+  letter-spacing: 0.16em;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  text-align: center;
+}
+
+.pca-image-card strong {
+  display: block;
+
+  margin-top: 13px;
+
+  font-size: 11px;
+
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  text-align: center;
+}
+
+.pca-camera-image,
+.pca-reduced-image,
+.pca-reconstructed-image {
+  height: 140px;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  background: #0b0b0e;
+
+  display: grid;
+
+  place-items: center;
+}
+
+.camera-silhouette {
+  width: 75px;
+  height: 55px;
+
+  border: 2px solid rgba(255, 255, 255, 0.3);
+
+  border-radius: 8px;
+
+  display: grid;
+
+  place-items: center;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 25px;
+}
+
+.reduced-bars {
+  width: 75%;
+
+  height: 70%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+}
+
+.reduced-bars i {
+  display: block;
+
+  width: 9px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.reduced-bars i:nth-child(1) {
+  height: 30%;
+}
+
+.reduced-bars i:nth-child(2) {
+  height: 55%;
+}
+
+.reduced-bars i:nth-child(3) {
+  height: 85%;
+}
+
+.reduced-bars i:nth-child(4) {
+  height: 65%;
+}
+
+.reduced-bars i:nth-child(5) {
+  height: 40%;
+}
+
+.reconstruction-pattern {
+  width: 80px;
+  height: 80px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 4px;
+}
+
+.reconstruction-pattern i {
+  border-radius: 4px;
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.reconstruction-pattern i:nth-child(2) {
+  background: rgba(82, 39, 255, 0.35);
+}
+
+.reconstruction-pattern i:nth-child(3) {
+  background: rgba(255, 43, 214, 0.35);
+}
+
+.pca-flow-arrow {
+  color: rgba(255, 255, 255, 0.2);
+
+  font-size: 24px;
+}
+
+/* =========================
+   CONCLUSION
+========================= */
+
+.pca-conclusion {
+  padding: 80px 0;
+
+  text-align: center;
+}
+
+.pca-conclusion h2 {
+  font-size: clamp(45px, 7vw, 80px);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+
+  font-weight: 400;
+
+  margin: 25px auto;
+}
+
+.pca-conclusion h2 span {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.pca-conclusion p {
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  line-height: 1.8;
+
+  text-align: center;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .pca-header {
+    padding: 0 20px;
+  }
+
+  .pca-experiment-number {
+    display: none;
+  }
+
+  .pca-content {
+    padding: 70px 18px 100px;
+  }
+
+  .pca-info-grid,
+  .pca-lab {
+    grid-template-columns: 1fr;
+  }
+
+  .pca-interactive-heading,
+  .pca-code-header {
+    align-items: center;
+
+    flex-direction: column;
+  }
+
+  .pca-stage-controls {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pca-visual {
+    height: 360px;
+  }
+
+  .pca-image-flow {
+    flex-direction: column;
+  }
+
+  .pca-flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .pca-image-card {
+    width: min(100%, 280px);
+  }
+
+  .pca-hero h1 {
+    font-size: clamp(52px, 15vw, 85px);
+  }
+
+  .pca-objectives {
+    max-width: 100%;
+  }
+
+  .pca-objective {
+    padding: 25px 10px;
+  }
+
+  .pca-stage-controls button small {
+    max-width: 160px;
+  }
+}
+
+/* FINAL SYMMETRY + SHARED CODE STYLE */
+.pca-header{max-width:1150px;margin:0 auto;padding:0 28px;grid-template-columns:1fr auto 1fr;display:grid;justify-content:initial;box-sizing:border-box;}
+.pca-header .pca-back-button{justify-self:start}.pca-header .pca-brand{justify-self:center}.pca-header .pca-experiment-number{justify-self:end;}
+.pca-hero{max-width:900px;margin:0 auto 90px;text-align:center;}
+.pca-code-section{max-width:1150px;margin:0 auto 120px;padding-left:0;padding-right:0;box-sizing:border-box;}
+.pca-code-header{max-width:1000px;margin:25px auto 0;}
+.pca-code-section pre{max-width:1000px;margin:30px auto 0;box-sizing:border-box;}
+@media(max-width:800px){.pca-header{padding:0 18px}.pca-header .pca-experiment-number{display:none}.pca-code-section{padding:0 18px}}

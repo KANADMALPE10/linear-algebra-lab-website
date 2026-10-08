@@ -1,0 +1,672 @@
+.experiment-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #050506;
+  color: white;
+}
+
+.experiment-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(82, 39, 255, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 35%,
+      rgba(255, 43, 214, 0.13),
+      transparent 32%
+    );
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.experiment-header {
+  height: 76px;
+  padding: 0 5vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  position: relative;
+  z-index: 2;
+
+  backdrop-filter: blur(18px);
+}
+
+.back-button {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: rgba(255, 255, 255, 0.7);
+
+  padding: 10px 15px;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  font-size: 12px;
+
+  transition: 180ms ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: white;
+}
+
+.experiment-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 14px;
+}
+
+.experiment-brand span {
+  width: 32px;
+  height: 32px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 9px;
+}
+
+.experiment-number {
+  font-size: 10px;
+
+  letter-spacing: 0.18em;
+
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.experiment-content {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1150px;
+
+  margin: auto;
+
+  padding: 100px 28px 140px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.experiment-hero {
+  max-width: 900px;
+
+  margin-bottom: 90px;
+}
+
+.experiment-label,
+.section-label,
+.card-label {
+  font-size: 10px;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.experiment-hero h1 {
+  margin: 25px 0;
+
+  font-size: clamp(60px, 9vw, 120px);
+
+  line-height: 0.88;
+
+  letter-spacing: -0.07em;
+
+  font-weight: 500;
+}
+
+.experiment-hero h1 span {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.experiment-hero p {
+  max-width: 650px;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 17px;
+
+  line-height: 1.75;
+}
+
+/* =========================
+   AIM / OBJECTIVE
+========================= */
+
+.info-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+
+  margin-bottom: 120px;
+}
+
+.info-card {
+  padding: 30px;
+
+  min-height: 150px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.info-card h2 {
+  margin: 25px 0 0;
+
+  font-size: 27px;
+
+  font-weight: 400;
+}
+
+.info-card p {
+  margin-top: 25px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  line-height: 1.7;
+}
+
+/* =========================
+   GENERAL CONTENT
+========================= */
+
+.content-section {
+  margin-bottom: 110px;
+}
+
+/* =========================
+   THEORY SECTION
+========================= */
+
+.theory-section {
+  text-align: center;
+}
+
+.section-heading {
+  max-width: 760px;
+
+  margin: 30px auto 0;
+
+  text-align: center;
+}
+
+.section-heading h2 {
+  font-size: clamp(35px, 5vw, 58px);
+
+  font-weight: 400;
+
+  letter-spacing: -0.05em;
+
+  margin: 0 auto 30px;
+
+  text-align: center;
+}
+
+.section-heading p {
+  color: rgba(255, 255, 255, 0.48);
+
+  line-height: 1.9;
+
+  font-size: 15px;
+
+  margin: 18px auto;
+
+  text-align: center;
+
+  max-width: 720px;
+}
+
+/* =========================
+   INTERACTIVE LAB
+========================= */
+
+.transform-section {
+  margin-bottom: 120px;
+}
+
+.transform-header {
+  margin-top: 25px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: end;
+
+  gap: 30px;
+}
+
+.transform-header h2 {
+  font-size: clamp(35px, 5vw, 58px);
+
+  font-weight: 400;
+
+  letter-spacing: -0.05em;
+
+  margin: 0 0 25px;
+}
+
+.transform-header p {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.transform-status {
+  padding: 10px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 999px;
+
+  font-size: 9px;
+
+  letter-spacing: 0.16em;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.transform-lab {
+  margin-top: 35px;
+
+  display: grid;
+
+  grid-template-columns: 1.5fr 0.7fr;
+
+  gap: 15px;
+}
+
+.transform-preview,
+.transform-controls {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.transform-preview {
+  padding: 20px;
+}
+
+.image-stage {
+  height: 480px;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(82, 39, 255, 0.15),
+      rgba(255, 43, 214, 0.1)
+    ),
+    #0b0b0e;
+
+  display: grid;
+
+  place-items: center;
+}
+
+.demo-image {
+  width: 300px;
+  height: 330px;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  transition:
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.demo-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.transform-description {
+  margin-top: 18px;
+
+  padding: 0 5px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* =========================
+   TRANSFORMATION BUTTONS
+========================= */
+
+.transform-controls {
+  padding: 12px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.transform-controls button {
+  border: 0;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  padding: 15px;
+
+  border-radius: 11px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  display: flex;
+
+  gap: 13px;
+
+  align-items: center;
+
+  transition: 180ms ease;
+}
+
+.transform-controls button span {
+  font-size: 9px;
+
+  opacity: 0.35;
+}
+
+.transform-controls button:hover {
+  background: rgba(255, 255, 255, 0.05);
+
+  color: white;
+}
+
+.transform-controls button.active {
+  background: rgba(255, 255, 255, 0.09);
+
+  color: white;
+}
+
+/* =========================
+   PROBLEM DEFINITION
+========================= */
+
+.problem-grid {
+  margin-top: 30px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+}
+
+.problem-item {
+  padding: 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.problem-item span {
+  color: rgba(255, 255, 255, 0.25);
+
+  margin-right: 18px;
+
+  font-size: 10px;
+}
+
+/* =========================
+   CODE
+========================= */
+
+.code-section {
+  margin-bottom: 120px;
+}
+
+.code-header {
+  margin-top: 25px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: end;
+}
+
+.code-header h2 {
+  font-size: clamp(35px, 5vw, 58px);
+
+  font-weight: 400;
+
+  letter-spacing: -0.05em;
+
+  margin: 0 0 25px;
+}
+
+.code-header p {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.code-language {
+  font-size: 10px;
+
+  letter-spacing: 0.15em;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.code-section pre {
+  margin-top: 30px;
+
+  padding: 28px;
+
+  overflow-x: auto;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+.code-section code {
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+}
+
+/* =========================
+   QUESTIONS
+========================= */
+
+.questions {
+  margin-top: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.question {
+  display: grid;
+
+  grid-template-columns: 55px 1fr;
+
+  gap: 15px;
+
+  padding: 24px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.question span {
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 11px;
+}
+
+.question p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  line-height: 1.7;
+}
+
+/* =========================
+   CONCLUSION
+========================= */
+
+.conclusion {
+  padding: 80px 0;
+
+  text-align: center;
+}
+
+.conclusion h2 {
+  font-size: clamp(45px, 7vw, 80px);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+
+  font-weight: 400;
+
+  margin: 25px 0;
+}
+
+.conclusion h2 span {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.conclusion p {
+  max-width: 600px;
+
+  margin: auto;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  line-height: 1.8;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .experiment-header {
+    padding: 0 20px;
+  }
+
+  .experiment-number {
+    display: none;
+  }
+
+  .experiment-content {
+    padding: 70px 18px 100px;
+  }
+
+  .info-grid,
+  .transform-lab {
+    grid-template-columns: 1fr;
+  }
+
+  .transform-header,
+  .code-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .transform-controls {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .image-stage {
+    height: 360px;
+  }
+
+  .problem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experiment-hero h1 {
+    font-size: clamp(55px, 16vw, 90px);
+  }
+
+  .section-heading {
+    max-width: 90%;
+  }
+
+  .section-heading p {
+    max-width: 100%;
+  }
+}
+
+/* FINAL SYMMETRY + SHARED CODE STYLE */
+.experiment-header { max-width:1150px; margin:0 auto; padding:0 28px; grid-template-columns:1fr auto 1fr; display:grid; justify-content:initial; box-sizing:border-box; }
+.experiment-header .back-button{justify-self:start;} .experiment-header .experiment-brand{justify-self:center;} .experiment-header .experiment-number{justify-self:end;}
+.experiment-hero{max-width:900px;margin:0 auto 90px;text-align:center;} .experiment-hero h1,.experiment-hero p{margin-left:auto;margin-right:auto;}
+.code-section{max-width:1150px;margin:0 auto 120px;text-align:center;}
+.code-header{max-width:1000px;margin:25px auto 0;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;text-align:left;}
+.code-header h2{margin:0 0 20px;} .code-header p{margin:0;}
+.code-section pre{max-width:1000px;margin:30px auto 0;box-sizing:border-box;}
+@media(max-width:800px){.experiment-header{padding:0 18px}.experiment-header .experiment-number{display:none}.code-header{flex-direction:column;align-items:center;text-align:center}.code-section{padding:0 18px}.code-header h2{margin-bottom:15px}}

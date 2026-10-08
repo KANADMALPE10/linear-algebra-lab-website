@@ -1,0 +1,819 @@
+.experiment-page {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  color: #ffffff;
+  background: #030303;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.experiment-page-background {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(225, 0, 255, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 10% 70%,
+      rgba(50, 100, 255, 0.08),
+      transparent 30%
+    );
+}
+
+.experiment-header {
+  position: relative;
+  z-index: 2;
+  height: 76px;
+  padding: 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(18px);
+}
+
+.back-button {
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  transition: color 0.25s ease;
+}
+
+.back-button:hover {
+  color: #ffffff;
+}
+
+.back-button span {
+  font-size: 18px;
+}
+
+.experiment-number {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.experiment-hero {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 100px 24px 70px;
+  text-align: center;
+}
+
+.experiment-badge,
+.section-label {
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.experiment-badge {
+  display: inline-flex;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.experiment-hero h1 {
+  margin: 25px 0 20px;
+  font-size: clamp(48px, 7vw, 86px);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  font-weight: 600;
+}
+
+.experiment-hero p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.concept-card,
+.interactive-section,
+.solution-section,
+.why-section {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 55px 30px;
+}
+
+.concept-card {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.concept-card h2,
+.interactive-heading h2,
+.solution-section h2,
+.why-section h2 {
+  margin: 14px 0;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+}
+
+.concept-card > p {
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.process-flow {
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.process-item {
+  flex: 1;
+  min-width: 120px;
+}
+
+.process-item span {
+  display: block;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 11px;
+}
+
+.process-item strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.process-item small {
+  display: block;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+}
+
+.process-arrow {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 20px;
+}
+
+.interactive-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+}
+
+.interactive-heading p {
+  max-width: 550px;
+  color: rgba(255, 255, 255, 0.48);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.step-counter {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.step-counter span {
+  font-size: 42px;
+  letter-spacing: -0.05em;
+}
+
+.step-counter small {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.progress-track {
+  height: 2px;
+  margin: 30px 0;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.progress-fill {
+  height: 100%;
+  background: #ffffff;
+  transition: width 0.45s ease;
+}
+
+.interactive-card {
+  min-height: 430px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.035);
+  overflow: hidden;
+}
+
+.step-information {
+  padding: 50px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.step-tag {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.step-information h3 {
+  margin: 18px 0;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  font-weight: 500;
+}
+
+.step-information > p {
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+.operation-box {
+  margin: 30px 0;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.operation-box span {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 9px;
+  letter-spacing: 0.13em;
+}
+
+.operation-box strong {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.matrix-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  min-height: 350px;
+}
+
+.matrix-wrapper {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  padding: 22px 25px;
+}
+
+.matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 75px);
+  gap: 16px 12px;
+  align-items: center;
+}
+
+.matrix-cell {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.045);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 17px;
+  transition: all 0.35s ease;
+}
+
+.matrix-cell-active {
+  color: #ffffff;
+  background: rgba(225, 0, 255, 0.15);
+  border: 1px solid rgba(225, 0, 255, 0.35);
+  box-shadow: 0 0 25px rgba(225, 0, 255, 0.1);
+}
+
+.matrix-augmented {
+  border-left: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 0 9px 9px 0;
+  padding-left: 12px;
+}
+
+.matrix-bracket {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  width: 12px;
+  border-top: 2px solid rgba(255, 255, 255, 0.55);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.55);
+}
+
+.matrix-left {
+  left: 0;
+  border-left: 2px solid rgba(255, 255, 255, 0.55);
+}
+
+.matrix-right {
+  right: 0;
+  border-right: 2px solid rgba(255, 255, 255, 0.55);
+}
+
+.navigation-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.navigation-buttons button,
+.experiment-footer button {
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.navigation-buttons button:hover:not(:disabled),
+.experiment-footer button:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navigation-buttons button:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.navigation-buttons .next-button {
+  background: #ffffff;
+  color: #050505;
+  border-color: #ffffff;
+}
+
+.solution-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.solution-section > p {
+  max-width: 650px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+}
+
+.equation-stack {
+  margin-top: 35px;
+  display: grid;
+  gap: 10px;
+  max-width: 650px;
+}
+
+.equation-stack div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.equation-stack span {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 11px;
+}
+
+.equation-stack strong {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-weight: 400;
+}
+
+.solution-result {
+  margin-top: 30px;
+  display: flex;
+  gap: 12px;
+}
+
+.solution-result div {
+  width: 100px;
+  padding: 18px;
+  text-align: center;
+  border-radius: 14px;
+  border: 1px solid rgba(225, 0, 255, 0.25);
+  background: rgba(225, 0, 255, 0.07);
+}
+
+.solution-result span {
+  display: block;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+}
+
+.solution-result strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 28px;
+}
+
+.why-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.why-grid {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.why-grid > div {
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.why-grid span {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 11px;
+}
+
+.why-grid h3 {
+  margin: 25px 0 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.why-grid p {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.experiment-footer {
+  position: relative;
+  z-index: 1;
+  padding: 30px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 800px) {
+  .experiment-header {
+    padding: 0 20px;
+  }
+
+  .experiment-hero {
+    padding-top: 70px;
+  }
+
+  .process-flow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .process-arrow {
+    transform: rotate(90deg);
+  }
+
+  .interactive-card {
+    grid-template-columns: 1fr;
+  }
+
+  .step-information {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 30px;
+  }
+
+  .matrix-display {
+    padding: 25px 10px;
+    overflow-x: auto;
+  }
+
+  .matrix-grid {
+    grid-template-columns: repeat(4, 62px);
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interactive-heading {
+    align-items: flex-start;
+  }
+}
+
+/* FINAL SYMMETRY + CODE SYSTEM */
+.experiment-header {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 28px;
+  grid-template-columns: 1fr auto 1fr;
+  display: grid;
+  justify-content: initial;
+  box-sizing: border-box;
+}
+.experiment-header .back-button { justify-self: start; }
+.experiment-header .experiment-brand { justify-self: center; }
+.experiment-header .experiment-number { justify-self: end; }
+.experiment-brand { display:flex; align-items:center; justify-content:center; gap:10px; font-size:14px; white-space:nowrap; }
+.experiment-brand span { width:32px; height:32px; display:grid; place-items:center; border:1px solid rgba(255,255,255,.15); border-radius:9px; }
+.experiment-hero { max-width:900px; margin:0 auto 90px; text-align:center; }
+.experiment-hero h1, .experiment-hero p { margin-left:auto; margin-right:auto; }
+.experiment-code-section { max-width:1150px; margin:0 auto 120px; text-align:center; }
+.experiment-code-header { max-width:1000px; margin:25px auto 0; display:flex; align-items:flex-end; justify-content:space-between; gap:30px; text-align:left; }
+.experiment-code-header h2 { margin:0 0 20px; font-size:clamp(35px,5vw,58px); font-weight:400; letter-spacing:-.05em; }
+.experiment-code-header p { margin:0; color:rgba(255,255,255,.4); }
+.experiment-code-language { font-size:10px; letter-spacing:.15em; color:rgba(255,255,255,.3); white-space:nowrap; }
+.experiment-code-section pre { max-width:1000px; margin:30px auto 0; padding:30px; overflow-x:auto; box-sizing:border-box; border:1px solid rgba(255,255,255,.08); border-radius:18px; background:rgba(0,0,0,.45); color:rgba(255,255,255,.65); font-size:12px; line-height:1.7; text-align:left; }
+.experiment-code-section code { font-family:"SFMono-Regular",Consolas,monospace; }
+@media (max-width:800px){ .experiment-header{padding:0 18px;} .experiment-header .experiment-number{display:none;} .experiment-code-header{flex-direction:column; align-items:center; text-align:center;} .experiment-code-section{padding:0 18px;} }
+
+
+/* =========================================================
+   EXPERIMENT 01 — FINAL SYMMETRY / CENTER ALIGNMENT PASS
+========================================================= */
+
+.experiment-header {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 28px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  justify-content: initial;
+}
+
+.experiment-header .back-button { justify-self: start; }
+.experiment-header .experiment-brand { justify-self: center; }
+.experiment-header .experiment-number { justify-self: end; }
+
+.experiment-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.experiment-brand span {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 9px;
+}
+
+.experiment-hero,
+.concept-card,
+.interactive-section,
+.solution-section,
+.why-section {
+  text-align: center;
+}
+
+.experiment-hero {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.experiment-hero h1,
+.experiment-hero p,
+.concept-card h2,
+.concept-card > p,
+.interactive-heading h2,
+.interactive-heading p,
+.solution-section h2,
+.solution-section > p,
+.why-section h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.concept-card > p,
+.solution-section > p {
+  max-width: 700px;
+}
+
+.process-flow {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.process-item {
+  text-align: center;
+}
+
+.interactive-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.interactive-heading > div:first-child {
+  width: 100%;
+  text-align: center;
+}
+
+.step-counter {
+  display: none;
+}
+
+.interactive-card {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.step-information {
+  text-align: center;
+}
+
+.step-information h3,
+.step-information > p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.operation-box {
+  max-width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.matrix-display {
+  justify-content: center;
+}
+
+.navigation-buttons {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.equation-stack {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.equation-stack div {
+  justify-content: center;
+  text-align: center;
+}
+
+.solution-result {
+  justify-content: center;
+}
+
+.why-grid {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-grid > div {
+  text-align: center;
+}
+
+.why-grid h3,
+.why-grid p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* MATLAB code window — same visual structure as Experiment 08.
+   Code text itself intentionally stays left-aligned for readability. */
+.experiment-code-section {
+  max-width: 1150px;
+  margin: 0 auto 120px;
+  padding: 55px 30px;
+  text-align: center;
+}
+
+.experiment-code-heading {
+  max-width: 720px;
+  margin: 28px auto 40px;
+  text-align: center;
+}
+
+.experiment-code-heading h2 {
+  margin: 0 0 20px;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: .96;
+  letter-spacing: -.055em;
+  font-weight: 400;
+}
+
+.experiment-code-heading p {
+  max-width: 670px;
+  margin: auto;
+  color: rgba(255,255,255,.42);
+  line-height: 1.8;
+}
+
+.experiment-code-block {
+  max-width: 1000px;
+  margin: 0 auto 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  background: rgba(0,0,0,.45);
+  text-align: left;
+}
+
+.experiment-code-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  color: rgba(255,255,255,.3);
+  font-size: 9px;
+  letter-spacing: .15em;
+}
+
+.experiment-code-title strong {
+  font-weight: 400;
+  color: rgba(255,255,255,.3);
+}
+
+.experiment-code-block pre {
+  margin: 0;
+  padding: 30px;
+  overflow-x: auto;
+  background: transparent;
+  color: rgba(255,255,255,.65);
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.experiment-code-block code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+}
+
+@media (max-width: 800px) {
+  .experiment-header {
+    padding: 0 18px;
+  }
+
+  .experiment-header .experiment-number {
+    display: none;
+  }
+
+  .interactive-heading {
+    align-items: center;
+  }
+
+  .experiment-code-section {
+    padding: 55px 18px;
+  }
+
+  .experiment-code-block pre {
+    padding: 22px;
+    font-size: 11px;
+  }
+}
